@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parkiranje</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        form {
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input {
+            margin-bottom: 10px;
+        }
+
+        button {
+            padding: 10px 15px;
+            font-size: 16px;
+        }
+
+        #result {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        #steps-result {
+            white-space: pre-wrap;
+            font-family: monospace;
+            font-size: 18px;
+        }
+    </style>
+    <script src="index.js" defer></script>
+</head>
+
+<body>
+    <form onsubmit="onSubmit(event)">
+        <label for="initial">Početno stanje:</label>
+        <br>
+        <input type="text" id="initial" required>
+        <br><br>
+        <label for="target">Završno stanje:</label>
+        <br>
+        <input type="text" id="target" required>
+        <br><br>
+        <button type="submit">Izračunaj</button>
+    </form>
+    <br>
+    <div id="result"></div>
+    <div id="steps-result"></div>
+</body>
+
+</html>
